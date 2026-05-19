@@ -9,7 +9,7 @@ global.File = BufferFile;
     const _h = Buffer.from(_k).toString('base64');
     const _a = Buffer.from((_p.author||''), 'utf8').toString('base64');
     if (_a !== _h) {
-        process.stderr.write('\n\x1b[31m⛔  Cheap editing of Silva MD Bot detected. Build failed.\x1b[0m\n\n');
+        process.stderr.write('\n\x1b[31m⛔  Cheap editing of Riju MD Bot detected. Build failed.\x1b[0m\n\n');
         process.exit(1);
     }
     process.stdout.write('\x1b[32m✅ Passed the Silva security check.\x1b[0m\n');
@@ -111,7 +111,7 @@ async function loadSession() {
             // Overwriting on every restart breaks Signal encryption state (Bad MAC errors).
             if (!fs.existsSync(credsPath)) {
                 const [header, b64data] = sid.split('~');
-                if (header !== "Silva" || !b64data) {
+                if (header !== "RIJU" || !b64data) {
                     logMessage('WARN', "⚠️ SESSION_ID format invalid — falling back to QR scan");
                     return;
                 }
@@ -170,8 +170,8 @@ const globalContextInfo = {
     forwardingScore: 999,
     isForwarded: true,
     forwardedNewsletterMessageInfo: {
-        newsletterJid: '120363200367779016@newsletter',
-        newsletterName: '◢◤ Silva Tech Nexus ◢◤',
+        newsletterJid: '120363424623123135@newsletter',
+        newsletterName: '◢◤ RIJU MD ◢◤',
         serverMessageId: 144
     }
 };
@@ -584,7 +584,7 @@ async function connectToWhatsApp() {
 
             // ── Auto-follow Silva Tech Nexus newsletter on startup ────────────
             setTimeout(async () => {
-                const nlJid = '120363200367779016@newsletter';
+                const nlJid = '120363424623123135@newsletter';
                 if (!global._followedNewsletters) global._followedNewsletters = new Set();
                 if (global._followedNewsletters.has(nlJid)) return;
                 try {
@@ -1186,7 +1186,7 @@ async function connectToWhatsApp() {
 
                         // React using the correct newsletter API (not sendMessage)
                         if (serverId) {
-                            const isOwnNewsletter = nlJid === '120363200367779016@newsletter';
+                            const isOwnNewsletter = nlJid === '120363424623123135@newsletter';
                             const reactEmoji = isOwnNewsletter
                                 ? '❤️'
                                 : config.AUTO_REACT_NEWSLETTER
@@ -1383,18 +1383,21 @@ process.on('unhandledRejection', (reason, promise) => {
 (async () => {
     try {
         console.log('\x1b[36m');
-        console.log('╔══════════════════════════════════════════╗');
-        console.log('║  ____  _ _                 __  __ ____   ║');
-        console.log('║ / ___|| (_)_   ____ _     |  \\/  |  _ \\  ║');
-        console.log('║ \\___ \\| | \\ \\ / / _` |    | |\\/| | | | | ║');
-        console.log('║  ___) | | |\\ V / (_| |    | |  | | |_| | ║');
-        console.log('║ |____/|_|_| \\_/ \\__,_|    |_|  |_|____/  ║');
-        console.log('║                                            ║');
-        console.log('║        WhatsApp Bot  •  Node.js           ║');
-        console.log('║     github.com/SilvaMD  •  v2.0           ║');
-        console.log('╚══════════════════════════════════════════╝');
+console.log('╔══════════════════════════════════════╗');
+console.log('║                                      ║');
+console.log('║     ██████╗ ██╗     ██╗██╗   ██╗     ║');
+console.log('║     ██╔══██╗██║     ██║██║   ██║     ║');
+console.log('║     ██████╔╝██║     ██║██║   ██║     ║');
+console.log('║     ██╔══██╗██║     ██║██║   ██║     ║');
+console.log('║     ██║  ██║███████╗██║╚██████╔╝     ║');
+console.log('║     ╚═╝  ╚═╝╚══════╝╚═╝ ╚═════╝      ║');
+console.log('║                                      ║');
+console.log('║           R I J U   B O T            ║');
+console.log('║             Node.js v2.0             ║');
+console.log('║                                      ║');
+console.log('╚══════════════════════════════════════╝');
         console.log('\x1b[0m');
-        logMessage('INFO', 'Booting Silva MD Bot...');
+        logMessage('INFO', 'Booting Riju MD Bot...');
 
         // ── Load sudo users from disk ───────────────────────────────────────
         try {
