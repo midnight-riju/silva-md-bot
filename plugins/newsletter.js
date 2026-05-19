@@ -63,7 +63,7 @@ module.exports = {
         }
 
         if (command === 'followchannel') {
-            if (!jid) return reply(`Usage: ${prefix}followchannel <newsletter_jid>\n\nJID format: 1234567890@newsletter`);
+            if (!jid) return reply(`Usage: ${prefix}followchannel <newsletter_jid>\n\nJID format: 120363424623123135@newsletter`);
             if (!jid.endsWith('@newsletter')) return reply('JID must end with @newsletter');
             try {
                 await sock.newsletterFollow(jid);
