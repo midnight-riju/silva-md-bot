@@ -1,7 +1,7 @@
 {
   "name": "@silvatechb/silva-md-bot",
   "version": "2.0.0",
-  "description": "Silva MD — A feature-rich multi-device WhatsApp bot with 1200+ commands, AI agent, 19 smart features, and anti-ban protection. Built with Node.js and Baileys.",
+  "description": "Riju MD — A feature-rich multi-device WhatsApp bot with 1200+ commands, AI agent, 19 smart features, and anti-ban protection. Built with Node.js and Baileys.",
   "main": "silva.js",
   "scripts": {
     "start": "node silva.js"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SilvaTechB/silva-md-bot.git"
+    "url": "https://github.com/rijubiswas3/RIJU_MD"
   },
   "homepage": "https://silvatech.co.ke",
   "bugs": {
